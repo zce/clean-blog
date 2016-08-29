@@ -1,0 +1,34 @@
+{
+  "name": "micua",
+  "version": "0.1.0",
+  "description": "A demo web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/micua.git"
+  },
+  "keywords": [
+    "node",
+    "iceStone",
+    "zce",
+    "express"
+  ],
+  "author": "iceStone <ice@micua.com> (http://www.micua.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zce/micua/issues"
+  },
+  "homepage": "https://github.com/zce/micua#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "glob": "^7.0.6",
+    "xtemplate": "^4.6.0",
+    "xtpl": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
