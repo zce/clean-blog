@@ -1,0 +1,7 @@
+{{extend ('../shared/_admin.xtpl')}}
+
+{{#block ('body')}}
+<!-- Page Heading -->
+<h1 class="page-header">Blank Page <small>Subheading</small></h1>
+<!-- content placeholder -->
+{{/block}}

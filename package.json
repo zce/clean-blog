@@ -24,6 +24,7 @@
   "homepage": "https://github.com/zce/micua#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "express-slash": "^2.0.1",
     "glob": "^7.0.6",
     "xtemplate": "^4.6.0",
     "xtpl": "^3.2.0"
