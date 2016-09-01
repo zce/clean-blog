@@ -1,4 +1,6 @@
 const { Router } = require('express')
+const Post = require('../models/post')
+
 const router = module.exports = Router()
 // pathname starts with
 router.prefix = '/'
@@ -7,7 +9,10 @@ router.prefix = '/'
  * GET /
  */
 router.get('/', (req, res) => {
-  res.render('home/index')
+  Post.findLimit(0, 5, (err, posts) => {
+    res.locals.posts = posts
+    res.render('home/index')
+  })
 })
 
 /**
