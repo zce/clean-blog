@@ -30,10 +30,30 @@ class Post {
   }
 
   static findLimit(start, count, callback) {
-    const sql = `SELECT p.slug, p.title, p.excerpt, p.created, u.nickname FROM posts AS p
-INNER JOIN users AS u ON p.user_id = u.id
-WHERE p.\`status\` = 'published'
-LIMIT ?,?`
+    const sql = `SELECT
+      p.id,
+      p.slug,
+      p.title,
+      p.excerpt,
+      p.\`status\`,
+      p.\`type\`,
+      p.comment_status,
+      p.comment_count,
+      p.view_count,
+      p.created,
+      u.nickname
+    FROM
+      posts AS p
+    INNER JOIN
+      users AS u
+    ON
+      p.user_id = u.id
+    WHERE
+      p.\`status\` = 'published'
+    ORDER BY
+      p.created DESC
+    LIMIT
+      ?, ?`
 // 'select * from posts limit ?, ?'
     db.query(sql, [start, count], (err, rows) => {
       if (err) return typeof callback === 'function' && callback(err)

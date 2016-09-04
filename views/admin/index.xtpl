@@ -1,4 +1,5 @@
 {{extend ('../shared/_admin.xtpl')}}
+{{set(title = 'Dashboard &laquo; ' + options['site_name'])}}
 
 {{#block ('body')}}
 <!-- Page Heading -->

@@ -1,0 +1,25 @@
+{{set(region = utils.floor(show_count / 2))}}
+{{set(start = current_page - region <= 0 ? 1 : current_page - region)}}
+{{set(end = start + show_count)}}
+{{#if(end > total_page)}}
+  {{set(end = total_page + 1)}}
+  {{set(start = end - show_count)}}
+  {{set(start = start < 1 ? 1 : start)}}
+{{/if}}
+<ul class="pagination">
+  {{#if(current_page !== 1)}}
+  <li><a href="{{ url_prefix }}{{ current_page - 1 }}{{ url_suffix }}">&laquo;</a></li>
+  {{/if}}
+  {{#if(start !== 1)}}
+  <li class="disabled"><span>&hellip;</span></li>
+  {{/if}}
+  {{#each(range(start, end))}}
+  <li{{#if(this === current_page)}} class="active"{{/if}}><a href="{{ url_prefix }}{{ this }}{{ url_suffix }}">{{ this }}</a></li>
+  {{/each}}
+  {{#if(end !== total_page + 1)}}
+  <li class="disabled"><span>&hellip;</span></li>
+  {{/if}}
+  {{#if(current_page !== total_page)}}
+  <li><a href="{{ url_prefix }}{{ current_page + 1 }}{{ url_suffix }}">&raquo;</a></li>
+  {{/if}}
+</ul>

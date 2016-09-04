@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Clean Blog</title>
+  <title>{{{ title }}}</title>
   <!-- Bootstrap Core CSS -->
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Theme CSS -->
-  <link href="/css/clean-blog.css" rel="stylesheet">
+  <link href="/assets/css/clean-blog.css" rel="stylesheet">
   <!-- Custom Fonts -->
-  <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -29,7 +29,7 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site_menu">
           <span class="sr-only">Toggle navigation</span>Menu <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="/">{{ options['site_name'] }}</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="site_menu">
@@ -76,20 +76,20 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+          <p class="copyright text-muted">Copyright &copy; {{ options['site_name'] }} 2016</p>
         </div>
       </div>
     </div>
   </footer>
   <!-- jQuery -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
-  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <!-- Contact Form JavaScript -->
-  <script src="/js/jqBootstrapValidation.js"></script>
-  <script src="/js/contact_me.js"></script>
+  <script src="/assets/js/jqBootstrapValidation.js"></script>
+  <script src="/assets/js/contact_me.js"></script>
   <!-- Theme JavaScript -->
-  <script src="/js/clean-blog.js"></script>
+  <script src="/assets/js/clean-blog.js"></script>
 </body>
 
 </html>

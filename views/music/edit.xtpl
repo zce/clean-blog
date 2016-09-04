@@ -1,0 +1,23 @@
+{{extend ('../shared/_admin.xtpl')}}
+{{set(title = '编辑音乐 &laquo; ' + options['site_name'])}}
+
+{{#block ('body')}}
+<h1 class="page-header">编辑音乐</h1>
+<form action="/admin/music/edit/{{item.id}}" method="post">
+  <div class="form-group">
+    <label for="id">#</label>
+    <input type="text" class="form-control" name="id" id="id" value="{{item.id}}" readonly>
+  </div>
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" class="form-control" name="name" id="name" value="{{item.name}}">
+  </div>
+  <div class="form-group">
+    <label for="artist">artist</label>
+    <input type="text" class="form-control" name="artist" id="artist" value="{{item.artist}}">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+</form>
+{{/block}}

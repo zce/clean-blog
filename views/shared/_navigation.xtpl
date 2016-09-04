@@ -8,7 +8,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin</a>
+    <a class="navbar-brand" href="/">{{ options['site_name'] }}</a>
   </div>
   <!-- Top Menu Items -->
   <ul class="nav navbar-right top-nav">
@@ -55,17 +55,16 @@
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
   <div class="collapse navbar-collapse sidebar">
     <ul class="nav navbar-nav side-nav">
-      <li{{#if(current_page === 'index')}} class="active"{{/if}}><a href="/admin/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-      <li{{#if(current_page === 'tables')}} class="active"{{/if}}><a href="/admin/tables/"><i class="fa fa-fw fa-table"></i> Tables</a></li>
-      <li{{#if(current_page === 'forms')}} class="active"{{/if}}><a href="/admin/forms/"><i class="fa fa-fw fa-edit"></i> Forms</a></li>
-      <li{{#if(current_page === 'elements')}} class="active"{{/if}}><a href="/admin/elements/"><i class="fa fa-fw fa-desktop"></i> Elements</a></li>
-      <li{{#if(current_page === 'grid')}} class="active"{{/if}}><a href="/admin/grid/"><i class="fa fa-fw fa-wrench"></i> Grid</a></li>
-      <li{{#if(current_page === 'blank')}} class="active"{{/if}}><a href="/admin/blank/"><i class="fa fa-fw fa-file"></i> Blank Page</a></li>
+      <li><a href="/admin/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
+      <li><a href="/admin/posts"><i class="fa fa-fw fa-file-word-o"></i> 文章</a></li>
       <li>
         <a href="javascript:;" data-toggle="collapse" data-target="#sub_item_1"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
         <ul id="sub_item_1" class="collapse">
-          <li><a href="#">Dropdown Item</a></li>
-          <li><a href="#">Dropdown Item</a></li>
+          <li><a href="/admin/pages/tables/"><i class="fa fa-fw fa-table"></i> Tables</a></li>
+          <li><a href="/admin/pages/forms/"><i class="fa fa-fw fa-edit"></i> Forms</a></li>
+          <li><a href="/admin/pages/elements/"><i class="fa fa-fw fa-desktop"></i> Elements</a></li>
+          <li><a href="/admin/pages/grid/"><i class="fa fa-fw fa-wrench"></i> Grid</a></li>
+          <li><a href="/admin/pages/blank/"><i class="fa fa-fw fa-file"></i> Blank Page</a></li>
         </ul>
       </li>
     </ul>

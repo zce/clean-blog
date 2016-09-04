@@ -1,4 +1,5 @@
-{{extend ('../shared/_admin.xtpl')}}
+{{extend ('../../shared/_admin.xtpl')}}
+{{set(title = 'Tables &laquo; ' + options['site_name'])}}
 
 {{#block ('body')}}
 <!-- Page Heading -->

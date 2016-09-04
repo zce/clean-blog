@@ -1,0 +1,48 @@
+{{extend ('../shared/_admin.xtpl')}}
+{{set(title = 'Posts &laquo; ' + options['site_name'])}}
+
+{{#block ('body')}}
+<h1 class="page-header">文章列表 <small><a href="/admin/write">写文章</a></small></h1>
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>title</th>
+      <th>type</th>
+      <th>status</th>
+      <th>comment_status</th>
+      <th>comment_count</th>
+      <th>view_count</th>
+      <th>created</th>
+      <th>author</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each(posts)}}
+    <tr>
+      <td>{{ this.id }}</td>
+      <td>{{ this.title }}</td>
+      <td>{{ this.type }}</td>
+      <td>{{ this.status }}</td>
+      <td>{{ this.comment_status }}</td>
+      <td>{{ this.comment_count }}</td>
+      <td>{{ this.view_count }}</td>
+      <td>{{ this.created }}</td>
+      <td>{{ this.nickname }}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<nav class="text-center">
+  {{include ('../shared/_pagination', show_count = 7, url_prefix = '/admin/posts/')}}
+  {{!-- <ul class="pagination pagination-lg">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul> --!}}
+</nav>
+{{/block}}

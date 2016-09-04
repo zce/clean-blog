@@ -1,16 +1,17 @@
 {{extend ('../shared/_blog')}}
+{{set(title = post.title + ' &laquo; ' + options['site_name'])}}
 
 {{#block ('body')}}
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('../img/post-bg.jpg')">
+<header class="intro-header" style="background-image: url('/assets/img/post-bg.jpg')">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>{{post.title}}</h1>
-          <h2 class="subheading">{{post.excerpt}}</h2>
-          <span class="meta">Posted by <a href="#">Start Bootstrap</a> on {{post.created}}</span>
+          <h1>{{ post.title }}</h1>
+          <h2 class="subheading">{{ post.excerpt }}</h2>
+          <span class="meta">Posted by <a href="#">{{ user.nickname }}</a> on {{ post.created }}</span>
         </div>
       </div>
     </div>
@@ -71,13 +72,13 @@
             <div class="media-body">
               <h4 class="media-heading">Nested media heading</h4>
               <p class="content">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
-          <p class="meta">
-            <span><i class="fa fa-clock-o" aria-hidden="true"></i> <em>August 24, 2014</em></span>
-            <span class="pull-right">
-              <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 10</a>
-              <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> 10</a>
-            </span>
-          </p>
+              <p class="meta">
+                <span><i class="fa fa-clock-o" aria-hidden="true"></i> <em>August 24, 2014</em></span>
+                <span class="pull-right">
+                  <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 10</a>
+                  <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> 10</a>
+                </span>
+              </p>
             </div>
           </div>
         </div>

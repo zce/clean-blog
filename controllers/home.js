@@ -9,7 +9,8 @@ router.prefix = '/'
  * GET /
  */
 router.get('/', (req, res) => {
-  Post.findLimit(0, 5, (err, posts) => {
+  const size = parseInt(req.app.locals.options['page_size'])
+  Post.findLimit(0, size, (err, posts) => {
     res.locals.posts = posts
     res.render('home/index')
   })

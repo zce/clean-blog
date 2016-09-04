@@ -25,8 +25,8 @@ class User {
     })
   }
 
-  static findOne(slug, callback) {
-    db.query('select * from users where `slug` = ?', slug, (err, rows) => {
+  static findOne(id, callback) {
+    db.query('select * from users where `id` = ?', id, (err, rows) => {
       if (err) return typeof callback === 'function' && callback(err)
       typeof callback === 'function' && callback(null, User.create(rows[0]))
     })
